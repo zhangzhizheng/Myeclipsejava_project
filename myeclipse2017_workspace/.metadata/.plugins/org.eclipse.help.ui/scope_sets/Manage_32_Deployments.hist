@@ -1,7 +1,0 @@
-#Tue Aug 28 21:03:12 CST 2018
-__DEFAULT__=false
-org.eclipse.sdk.Eclipse.master=true
-org.eclipse.help.ui.localSearch.master=true
-com.genuitec.stackoverflowSearch.master=true
-com.genuitec.githubSearch.master=true
-expression=Manage Deployments

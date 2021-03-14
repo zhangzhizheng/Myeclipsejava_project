@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;mybatis_first/config/sqlmap/UserMapper.xml&apos; to &apos;UserMapper1.xml&apos;" description="Rename resource &apos;UserMapper.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="config/sqlmap/UserMapper.xml" name="UserMapper1.xml" stamp="1581848380108" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;mybatis_first/config/sqlmap/UserMapper1.xml&apos; to &apos;User.xml&apos;" description="Rename resource &apos;UserMapper1.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="config/sqlmap/UserMapper1.xml" name="User.xml" stamp="1581848736082" updateReferences="true"/>
-</session>

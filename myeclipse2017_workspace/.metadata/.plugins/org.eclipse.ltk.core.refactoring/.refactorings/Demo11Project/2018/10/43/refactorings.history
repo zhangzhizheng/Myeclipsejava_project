@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;com.myservlet.shape&apos; to &apos;Demo11Session/src&apos;&#x0D;&#x0A;- Original project: &apos;Demo11Project&apos;&#x0D;&#x0A;- Destination element: &apos;Demo11Session/src&apos;&#x0D;&#x0A;- Original element: &apos;Demo11Project/src/com.myservlet.shape&apos;" description="Copy package" destination="=Demo11Session/src" element1="/src&lt;com.myservlet.shape" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1540179420448" version="1.0"/>
-</session>

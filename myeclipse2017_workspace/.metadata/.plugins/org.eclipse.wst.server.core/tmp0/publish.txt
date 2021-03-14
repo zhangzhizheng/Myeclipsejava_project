@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Thu Dec 24 11:18:00 CST 2020
-org.eclipse.jst.jee.server\:Demo13Framework=D\:\\apache-tomcat-7.0.69\\webapps\\Demo13Framework

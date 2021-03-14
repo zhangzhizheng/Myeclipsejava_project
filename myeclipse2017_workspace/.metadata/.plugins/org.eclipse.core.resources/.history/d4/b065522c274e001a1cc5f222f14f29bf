@@ -1,5 +1,0 @@
-package cn.mybatis.mapper;
-
-public class UserDao {
-
-}
