@@ -1,0 +1,5 @@
+1550302041318	Rename type 'AccountDao'
+1550303165882	Rename type 'ServiceDao'
+1550303186196	Rename type 'ServiceDaoImpl'
+1550306601933	Rename type 'AccountServiceDaoImpl'
+1550306618203	Rename type 'AccountServiceDao'

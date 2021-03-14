@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html;charset=gbk" import="java.util.*"%>
+
+<html>
+<head>
+<title>影迷互动平台</title>
+<jsp:useBean scope="page" id="News" class="com.cyl.impl.News"/>
+</head>
+<%@include file="../inc/admin_news_head.inc"%>
+<body background="../workshop/images/openback.jpg">
+
+<div align="center">
+<% String sNewsID = request.getParameter("NewsID");
+		long lNewsID = Long.parseLong(sNewsID);
+		News.setNewID(lNewsID);
+		News.init();
+		String sIntro=News.getIntro();
+		String sName=News.getName();
+		String sTime=News.getCreateTime();
+		long sAdminID=News.getAdminID();
+		
+		
+		%>
+
+<br>
+<H3 align="center"><%=sName%></H3>
+<H4 align="center"><%=sTime%></H4>
+<H5 align="center"><%=sIntro%></H5><br>
+<a href="javascript:window.history.go(-1)">返回</a>
+</div>
+
+<%@include file="../inc/tail.inc"%>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<!--
+    	作者：281920129@qq.com
+    	时间：2018-10-07
+    	描述：http-equiv:属性提供了content属性的信息/值的HTTP头，可用于模拟一个 HTTP 响应头。
+    				content-type：规定文档的字符编码。
+    				
+    				content：必须属性，定义与http-equiv或name属性相关的元信息。
+    				
+    				charest:属性规定 HTML 文档的字符编码，可以通过任意元素上的lang属性来重写。
+    -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4114天庭博客</title>
+<!--
+	作者：281920129@qq.com
+	时间：2018-10-07
+	描述：link 属性解释
+				rel:属性指示被链接的文档是一个样式表,规定当前文档与被链接文档之间的关系,
+				rel 属性的 "stylesheet" 值得到了所有浏览器的支持。其他值只得到了部分地支持。
+				
+				href：属性指向了一个外部样式表的位置，规定被链接文档的位置（URL），
+				如果需要，应该对所有的 URL 进行 URL 编码。
+				
+				media:属性规定被链接文档将显示在什么设备上,用于为不同的媒介类型规定不同的样式
+				所有浏览器都支持值为 "screen"、"print" 以及 "all" 的 media 属性。
+-->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<!--
+	作者：281920129@qq.com
+	时间：2018-10-07
+	描述：利用javaScript实现：只有当点击“展开/收起”时才会显示或隐藏
+	
+				src:链接一个外部脚本文件,规定外部脚本文件的 URL。
+				可以在单独的文件中创建 JavaScript，并以 .js 为后缀保存，然后使用 <script> 标签中的 src 属性引用该文件即可。
+				
+				type:在 HTML 页面中插入一段 JavaScript,必需的 type 属性规定脚本的 MIME 类型,用来指定 <script> 标签中的脚本的类型,
+				MIME 类型由两部分组成：媒介类型和子类型。对于 JavaScript，其 MIME 类型是 "text/javascript"。
+				
+-->
+<script src="js/jquery-1.3.2.min.js" type="text/javascript" charset="UTF-8"></script>
+<!--
+	作者：281920129@qq.com
+	时间：2018-10-07
+	描述：function 语句用于声明一个函数,函数声明后，我们可以在需要的时候调用。
+	
+				使用了jquery, $ 是jquery的对象,$是javascript运用jquery框架时，所用到的符号,用法其实和原始的javascript差不多,
+				 这个$(document).ready(function () {})相当于 document.onreadyStateChange=function(event){if(document.readystate=="complete"){}};
+				 表示文档结构已经加载完成（不包含图片等非文字媒体文件）后执行的js代码。
+				 
+				 $(document).click(function () {}):当选中的选择器被点击时触发回调函数fn,只针对与页面已存在的选择器。
+				 
+				$(document).slideToggle(function () {}): slideToggle() 方法通过使用滑动效果（高度变化）来切换元素的可见状态。
+				如果被选元素是可见的，则隐藏这些元素，如果被选元素是隐藏的，则显示这些元素。
+-->
+<script type="text/javascript" charset="UTF-8">
+	$(document).ready(function(){$("a.mailinglist").click(function () { $("div.mailing_box").slideToggle("quike");return false;});});
+</script>
+
+</head>
+</head>
+	<body>
+	<a href="#" class="buyart"></a>
+<div id="wrapper">
+		<!--
+        	作者：281920129@qq.com
+        	时间：2018-10-02
+        	描述：搭建首页第一行的DIV,包在最外面的DIV,同时在CSS中的设置为默认不显示，只有在点击“展开/收起”按钮才会显示或隐藏
+        -->
+		<div class="mailing_box">
+			<!--
+            	作者：281920129@qq.com
+            	时间：2018-10-02
+            	描述：正文DIV
+            -->
+			<div class="inner_mailbox">
+				<!--
+                	作者：281920129@qq.com
+                	时间：2018-10-02
+                	描述：正文左边列
+                -->
+				<div id="mail_left">
+				<h2 class="maillist_hdr hdr">欢迎光临</h2>
+				<p>这里是我们的博客，想要联系我们的话可以留下我的邮箱地址。</p>
+				<form method="post">
+				<!-- <input type="text" name="address" size="28" value="填写邮箱" onfocus="if(this.value='填写邮箱';"class="text_input)" />
+					<input type="button" value="提交" name="sumbit" class="mail_button" /> -->
+					
+					<br />
+				</form>
+			</div>
+				<!--
+                	作者：281920129@qq.com
+                	时间：2018-10-02
+                	描述：正文右边列
+                -->
+                <div id="social_right">
+					<h2 class="socialize_hdr hdr">我们的自我介绍</h2>
+					<p><img src="images/avatar.gif"border="0" class="socialize_avatar"/>一群欢乐的逗逼
+					<ul class="left_links">
+						<li><strong>付阳阳</strong> &mdash; 受得住寂寞，耐得住芳华</li>
+						<li><strong>张波波</strong> &mdash; 做我想做的事，随心所欲</li>
+          				<li><strong>苏展鹏</strong> &mdash; 有时候最难的不是放弃，而是学会重新开始</li>
+         				<li><strong>韩明建</strong> &mdash; 你还有很多未完成梦，还有什么理由停下脚步</li>
+          				<li><strong>卜德政</strong> &mdash; 长风破浪会有时，直挂云帆济沧海</li>
+          				
+					</ul>
+				</div>
+			<div class="clear"></div>			
+		</div>
+	</div>
+	
+	<div class="contact_link"> <a href="#" class="mailinglist">展开 / 收起</a> </div>
+		<!--
+        	作者：281920129@qq.com
+        	时间：2018-10-02
+        	描述：搭建首页主体部分的DIV，构建主体部分第一行的DIV
+        -->
+        <div id="header">
+        	<h1><a href="#">我们的LOGO</a><!--描述：网站LOGO-->
+                      <a href="#" class="tag">看看</a></h1> <!--描述：个性说明-->
+        </div>
+        <!--
+        	作者：281920129@qq.com
+        	时间：2018-10-02
+        	描述：构建主体部分第2行的DIV，左边部分DIV，使用ul和li等控制段落的元素来布局导航文字
+        -->
+        
+        <div id="content">
+        	<ul id="nav">
+        		<li id="home"><a href="NewFile.html" class="selected">首页</a></li>
+        		<li id="artwork"><a href="#"><strong></strong>图片展示</a></li>
+        		<li id="store"><a href="#">创作交流</a></li>
+        		<li id="blog"><a href="#">博客</a></li>
+        		<li id="info"><a href="#">联系我们</a></li>
+        	</ul>
+              <!--
+        	作者：281920129@qq.com
+        	时间：2018-10-02
+        	描述：中间部分DIV是最新发表的博客，现在放置几条博客信息，放置的条数随意定义
+        				其中引入了narrow_center的CSS,其定义了这个DIV的宽度、背景、图片等信息
+        -->
+            <div id="center_well" class="narrow_center">
+        	<h2 class="recent_posts_hdr"><a href="#">最新发布>></a></h2>
+        	<ul class="recent_posts">
+        		<li>
+        			<div class="date">发布日期:2018.4.24</div>
+        			<h3><a href="#">一起出去(｡･∀･)ﾉﾞ嗨了</a></h3>
+        			<div class="entry">
+        				<p>今天出门绝对不顺。&hellip;<a href="#" rel="bookmark" class="comment_link">评论数：2</a></p>	
+        			</div>
+        		</li>
+        		
+        	</ul>
+            </div>        
+             <div id="left">
+        	<!--描述：广告区域的代码-->
+        	<div id="twitter">
+        		<h2 class="recent_tweets_har">广告标题</h2>
+        		<p><img src="images/flms.jpg" border="0" /> </p>
+        		<a href="#" class="follow">收藏我们的博客</a>
+        	</div>
+        	<!--描述：最新评论区域代码-->
+            <h2 class="recent_art_hdr"></h2>
+            	<p>最新评论 <span style="margin-left:20px;font-size:12px">更多&gt;&gt;</span>
+            	</p>
+            
+			 <ul class="recent_art">
+					<li>
+						<a href="#" rel="4226628850" title="">
+							<img border="0" src="images/4226628850_041effff78_s.jpg" />
+						</a>
+						<div class="date">
+							12.29.09
+						</div>
+						<h3>
+							<a href="#" title="">天使MM</a>
+						</h3>
+						<p>不错</p>
+					</li>				
+				
+				
+				</ul>
+		</div>
+        </div>
+        
+<div class="clear"></div>
+  
+       
+		<!--
+        	作者：281920129@qq.com
+        	时间：2018-10-02
+        	描述：搭建页脚部分DIV
+        -->
+  		<div id="footer">
+    		<p>&copy; Copyright 2010 - <a href="index.html">保留一切权利</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#" class="feed">发表RSS</a><span class="stats"> (81)</span>
+					&nbsp; &nbsp;<a href="#" class="feed">订阅RSS</a><span class="stats">
+					</span> &nbsp; &nbsp;<a href="#" class="dellink">已收藏</a><span class="stats">
+					(<a href="#" class="statslink">357次</a>)</span></p>
+  		</div>
+</div>
+	</body>
+</html>

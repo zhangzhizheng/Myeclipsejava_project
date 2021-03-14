@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace命名空间·为了对sql语句进行隔离，方便管理，mapper开发dao使用namespace有特殊作用2 -->
+<mapper namespace="test">
+	<!-- 在mapper.xml文件中配置很多的sql语句，执行每一个sql语句时，封装为MappedStatement对象 mapper.xml以statement为单位管理sql语句 -->
+
+	<!-- 根据id查询用户信息 -->
+	<!-- id：唯一标识，一个statement #{}:占位符，如果#{}中传入简单的类型的参数。#{}中可以随意命名 parameterType：输入参数的类型，通过#{}接收parameterType输入的参数 
+		resultType：输出结果类型，不管返回的是多条或者单条，指定单条记录映射的pojo类型 -->
+	<select id="findUserById" parameterType="int" resultType="cn.mybatis.po.User">
+		SELECT * FROM user WHERE id=#{id}
+	</select>
+	<!-- 根据用户名模糊查询 -->
+	<!-- ${}:表示sql拼接，通过${}接收参数，将参数的内容不加任何修饰拼接在sql中，但是不能防止sql注入 -->
+	<select id="findUserByName" parameterType="String" resultType="cn.mybatis.po.User">
+	
+		SELECT *FROM USER WHERE name LIKE '%${value}%'
+	</select>
+	<!-- 添加用户 
+	parameterType：输入参数的类型，User对象包括name、birthday、sex、address、
+	#{}接收pojo数据，使用ongl（对象导航图）解析出pojo的属性
+	#{name}表示从parameterType获取pojo的属性值
+	selectKey:用于主键返回，定义获取主键的sql
+	order：设置selectKey中sql执行顺序，相对于insert语句来说的
+	keyProperty：将主键设置到哪个属性
+	resultType：select LAST_INSERT_ID()的结果类型
+	-->
+	<insert id="insertUser" parameterType="cn.mybatis.po.User">
+	<selectKey keyProperty="id" order="AFTER" resultType="int">
+		select LAST_INSERT_ID()
+	</selectKey>
+	INSERT INTO user(name,birthday,sex,address) VALUES (#{name},#{birthday},#{sex},#{address})
+	</insert>
+	<!-- 用户删除 -->
+	<delete id="deleteUserById" parameterType="int">
+	delete from user where id=#{id}
+	</delete>
+	<!-- 用户更新 
+	要求：传入user对象的id属性值
+	-->
+	<update id="updateUser" parameterType="cn.mybatis.po.User">
+	update user set name=#{name},birthday=#{birthday},sex=#{sex},address=#{address} where id=#{id}
+	</update>
+</mapper>
+
+

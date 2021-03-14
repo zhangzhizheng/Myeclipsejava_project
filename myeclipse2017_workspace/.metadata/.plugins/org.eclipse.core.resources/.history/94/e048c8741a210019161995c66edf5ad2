@@ -1,0 +1,12 @@
+package cn.spring5;
+
+import java.util.List;
+
+public class Collection1 {
+	private List<String> list;
+
+	public void setList(List<String> list) {
+		this.list = list;
+	}
+	
+}

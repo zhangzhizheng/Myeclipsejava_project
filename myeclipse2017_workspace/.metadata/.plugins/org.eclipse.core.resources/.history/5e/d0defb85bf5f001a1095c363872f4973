@@ -1,0 +1,34 @@
+<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%
+request.setCharacterEncoding("gb2312");
+%>
+<html>
+<head>
+<title>影迷互动平台</title>
+<link rel=stylesheet type=text/css href="../lib/movie.css">
+</head>
+
+<body background="images/0008d-background.jpg"> 
+<%@include file="../inc/admin_head.inc"%>
+<div align="center">
+<br>
+<form name="form1" action="add_news_save.jsp" method="post"  target="_self">
+<table width="80%" border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%" height="25" align="right">标题：</td>
+<td width="80%" height="25">&nbsp;<input type="text" name="Name" size="40"></td>
+</tr>
+
+
+<tr>
+<td width="20%" align="right">内容：</td>
+<td width="80%">&nbsp;<textarea rows="12" cols="60" name="Intro"></textarea></td>
+</tr>
+</table>
+<p><input type="submit" name="sub" value="提交">&nbsp;&nbsp;
+<input type="reset" name="res" value="重填"></p>
+</form>
+</div>
+<%@include file="../inc/tail.inc"%>
+</body>
+</html>

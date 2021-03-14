@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>MyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>CookieServlet1</servlet-name>
+		<servlet-class>CookieServlet1</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>AddServlet</servlet-name>
+		<servlet-class>com.pdsu.servlet.AddServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.edu.pdsu.LoginServlet</servlet-class>
+  </servlet>
+
+<filter>
+		<filter-name>MyFilter</filter-name><!-- 过滤器 名称-->
+		<filter-class>cn.edu.pdsu.MyFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name><!-- 声明初始化参数名称-->
+			<param-value>UTF-8</param-value><!-- 指定初始化参数值 -->
+		</init-param>
+	</filter>
+
+
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/servlet/MyServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CookieServlet1</servlet-name>
+		<url-pattern>/servlet/CookieServlet1</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddServlet</servlet-name>
+		<url-pattern>/servlet/AddServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+	<filter-mapping><!-- 过滤器名称 -->
+	<filter-name>MyFilter</filter-name>
+	<url-pattern>/MyFilter</url-pattern><!-- 用于指定过滤器关联url样式，/*关联所有 -->
+	<dispatcher>REQUEST</dispatcher>
+	<dispatcher>FORWARD</dispatcher><!-- 指定过滤器对应的请求方式 -->
+	</filter-mapping>
+
+
+	
+
+</web-app>
